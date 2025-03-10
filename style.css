@@ -127,56 +127,78 @@ p {
   font-weight: 550;
   font-size: clamp(0.7rem, 2vw, 0.8rem);
 }
+/* *********************************************** */
 
-.header div {
-  /* background-color: grey; */
-}
+/* SIDE BAR */
 
 .sidebar {
   background-color: var(--sidebar-color);
   grid-row: 1/3;
 
   display: grid;
-  grid-template-rows: 10% 30% 15%;
+  grid-template-rows: 15% 35% 1fr;
   gap: 10px;
 
-  padding-left: 5px;
+  padding-left: 15%;
 }
 
-ul {
+.topLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+  font-weight: 550;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
+.topLeft img {
+  height: 40px;
+  filter: invert(1);
+}
+
+.sixLinks {
   display: grid;
+  grid-template-columns: 30px 1fr;
+  color: white;
+}
+
+.sixLinks ul {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
   justify-items: start;
-  align-content: space-around;
-  height: 100%;
+  align-items: center;
 
   list-style: none;
   padding: 0;
   margin: 0;
 
-  border: red solid 1px;
+  font-weight: 550;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
-ul li a {
+.sixLinks img {
+  height: 20px;
+  filter: invert(1);
+}
+
+.iconSidebar {
+  justify-content: start;
+}
+
+a {
   text-decoration: none;
   color: white;
 }
-
-.sidebar > * {
-  border: black solid 1px;
-}
-
-/* Main Section */
+/* ********************************************* */
+/* MAIN SECTION */
 .mainSection {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  padding: 2%;
+  /* padding: 2% 2% 5% 2%; */
+  padding: 2% 5% 5% 5%;
 }
 
-.contentDiv {
-  /* background-color:; */
-}
-
-.projects {
+.projects .title {
   height: 5%;
 }
 
@@ -185,8 +207,12 @@ ul li a {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 0 20px 0 0;
-
   height: 95%;
+}
+
+.projects .card {
+  border-left: orange solid 10px;
+  border-radius: 10px;
 }
 
 .card {
@@ -199,6 +225,9 @@ h3 {
   height: 10%;
 }
 
+/* *********************************************** */
+/* TREND BAR */
+
 .trendBar {
   /* background-color: var(--trendBar-color); */
 }
@@ -207,13 +236,19 @@ h3 {
   height: 50%;
   padding: 0;
   margin: 0;
-  /* background-color: rgb(255, 140, 190); */
+  background-color: rgb(255, 140, 190);
+
+  /* padding: 10px; */
 }
 
 .announceCards {
   display: grid;
-  gap: 5px;
   height: 90%;
+}
+
+.announceCards .card {
+  /* padding: 20px; */
+  font-size: 0.9rem;
 }
 
 .bottom {
