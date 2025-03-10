@@ -1,9 +1,15 @@
+@font-face {
+  font-family: "ROBOTO";
+  src: url(fonts/Roboto/static/Roboto_Condensed-Regular.ttf);
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "ROBOTO", Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   background-color: rgb(178, 183, 205);
 }
@@ -14,6 +20,7 @@ html {
   --main-section-color: rgb(255, 207, 207);
   --trendBar-color: rgb(246, 204, 234);
   --card-color: rgb(255, 255, 255);
+  --card-text-color: rgb(60, 60, 60);
 }
 
 .container {
@@ -194,12 +201,16 @@ a {
 .mainSection {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  /* padding: 2% 2% 5% 2%; */
+  /* padding: 2% 5% 5% 5%; */
   padding: 2% 5% 5% 5%;
+
+  border-bottom: green solid 5px;
 }
 
-.projects .title {
-  height: 5%;
+.projects {
+  height: 90%;
+  /* background-color: red; */
+  /* border-bottom: red solid 1px; */
 }
 
 .cardGrid {
@@ -208,6 +219,8 @@ a {
   gap: 20px;
   padding: 0 20px 0 0;
   height: 95%;
+
+  border-bottom: orange solid 2px;
 }
 
 .projects .card {
@@ -217,42 +230,76 @@ a {
 
 .card {
   background-color: var(--card-color);
+  color: var(--card-text-color);
   height: auto;
 }
 
-h3 {
-  margin: 0;
-  height: 10%;
+.sectionHeadline {
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 /* *********************************************** */
 /* TREND BAR */
 
 .trendBar {
-  /* background-color: var(--trendBar-color); */
+  /* background-color: red; */
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* padding-bottom: 5%; */
 }
 
 .top {
   height: 50%;
   padding: 0;
   margin: 0;
-  background-color: rgb(255, 140, 190);
-
-  /* padding: 10px; */
 }
 
-.announceCards {
+.announceContainer {
+  background-color: var(--card-color);
+  border-radius: 8px;
+
+  height: 80%;
+  padding: 10px;
+}
+
+.announceCardGrid {
   display: grid;
-  height: 90%;
+  grid-row: auto;
+  row-gap: 10px;
+
+  align-items: center;
+  justify-items: center;
 }
 
-.announceCards .card {
-  /* padding: 20px; */
-  font-size: 0.9rem;
+.divider {
+  background-color: var(--card-text-color);
+  opacity: 0.5;
+  height: 1.5px;
+  width: 70%;
 }
+
+.headline {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 0.65rem;
+}
+
+.announceCardGrid .card {
+  margin: 0 8%;
+}
+
+/* ********************************************* */
+/* ********************************************* */
 
 .bottom {
-  height: 50%;
+  height: 40%;
   background-color: rgb(166, 255, 161);
   margin: 0;
   padding: 0;
@@ -261,6 +308,11 @@ h3 {
 
 .trendingCards {
   display: grid;
-  gap: 5px;
-  height: 90%;
+  gap: 2px;
+  /* height: 100%; */
 }
+
+/* ************************************************ */
+/* ************************************************ */
+/* ************************************************ */
+/* ************************************************ */
