@@ -13,6 +13,7 @@ html {
   font-family: "ROBOTO", Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   background-color: rgb(193, 206, 221);
+  font-size: 18px;
 }
 
 :root {
@@ -23,6 +24,7 @@ html {
   --card-color: rgb(255, 255, 255);
   --card-text-color: rgb(73, 73, 73);
   --card-title-color: rgb(36, 36, 36);
+  --card-hover-bgColor: rgb(255, 255, 255);
 }
 
 .container {
@@ -205,6 +207,13 @@ button:hover {
   text-decoration: none;
   color: white;
 }
+
+.sixLinks li {
+  transition: transform 0.2s;
+}
+.sixLinks li:hover {
+  transform: scale(1.1);
+}
 /* ********************************************* */
 /* ********************************************* */
 /* ********************************************* */
@@ -225,7 +234,7 @@ button:hover {
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   gap: 30px 20px;
   padding: 0 20px 0 0;
@@ -243,6 +252,15 @@ button:hover {
   border-left: orange solid 10px;
   border-radius: 10px;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: var(--card-hover-bgColor);
 }
 
 .projectTitle {
